@@ -1,13 +1,21 @@
 (function () {
   let content = document.querySelector("#content");
   let input = document.querySelector("input");
+  let btn = document.querySelector(".btn")
 
-  window.addEventListener("change", () => {
-    input_content = input.value;
+  let savedText = window.localStorage.getItem("text");
+
+  input.value = savedText;
+
+  content.innerHTML = savedText;
+
+  btn.addEventListener("click", () => {
+    let input_content = input.value;
+    window.localStorage.setItem("text", input_content);
     content.innerHTML = input_content;
     let speech = new SpeechSynthesisUtterance(input_content);
     speechSynthesis.speak(speech);
-    input_words = input.value.length;
+    let input_words = input.value.length;
     if (input_words <= 4) {
       content.style.overflowY = "scroll";
       content.style.minWidth = "22rem";

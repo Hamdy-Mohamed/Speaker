@@ -82,7 +82,19 @@ html {
   box-shadow: 10px 10px 21px 1px #1b397b;
   cursor: pointer;
 }
-
+.btn {
+  height: 4rem;
+  width: 11rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: linear-gradient(45deg, #1b397b, #0c7fcf);
+  box-shadow: 2px 1px 11px #1b397bed;
+  cursor: pointer;
+}
+.btn:hover{
+  scale: 1.1;
+}
 .parent :nth-child(2)[type="text"] {
   padding: 2rem;
   text-align: center;
