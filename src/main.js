@@ -1,7 +1,7 @@
 (function () {
   let content = document.querySelector("#content");
   let input = document.querySelector("input");
-  let btn = document.querySelector(".btn")
+  let btn = document.querySelector(".btn");
 
   let savedText = window.localStorage.getItem("text");
 
