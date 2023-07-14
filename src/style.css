@@ -1,1 +1,135 @@
-* { padding: 0; margin: 0; box-sizing: border-box; outline: none; transition: 0.2s; color: wheat; text-transform: capitalize; } body { background-image: linear-gradient( to right top, #5d7eaf, #133660, #1d578d, #1f7abb, #12a0eb ); background-size: 500% 100%; animation: bg 20s infinite; overflow: hidden; } @keyframes bg { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; background-image: linear-gradient( to right top, #939496, #133660, #1d578d, #1f7abb, #12a0eb ); } } html { font-size: 16px; scroll-behavior: smooth; } .parent { height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 1rem; gap: 2rem; } .parent :nth-child(1) { font-size: 2rem; width: 22rem; height: 8rem; display: flex; justify-content: center; align-items: center; border-radius: 10px; font-family: system-ui; background-image: linear-gradient(45deg, #1b397b, #0c7fcf); overflow-x: hidden; } .parent :nth-child(1):hover { box-shadow: 1px 11px 21px 1px #1b397b; } ::placeholder { color: wheat; } .parent :nth-child(2) { height: 4rem; width: 31rem; border: none; border-radius: 10px; background: linear-gradient(45deg, #1b397b, #0c7fcf); } .parent :nth-child(2):hover { box-shadow: 10px 10px 21px 1px #1b397b; cursor: pointer; } .btn { height: 4rem; width: 11rem; border-radius: 10px; outline: none; border: none; background: linear-gradient(45deg, #1b397b, #0c7fcf); box-shadow: 2px 1px 11px #1b397bed; cursor: pointer; } .btn:hover{ scale: 1.1; } .parent :nth-child(2)[type="text"] { padding: 2rem; text-align: center; } .parent_marquee { position: absolute; top: 0; bottom: 0; height: 20rem; background: transparent; z-index: -1; } .parent_marquee :nth-child(1) { background: linear-gradient(45deg, #1b397b, #0c7fcf); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); height: 15rem; animation: clipPath 15s infinite; } @keyframes clipPath { to { rotate: 360deg; } } @media only screen and (max-width: 425px) { html { font-size: 10px; } .parent_marquee { display: none; } } @media only screen and (min-width: 426px) and (max-width: 476px) { html { font-size: 12px; } .parent_marquee { display: none; } } @media only screen and (min-width: 516px) and (max-width: 744px) { html { font-size: 15px; } .parent_marquee { display: none; } } @media only screen and (min-width: 1440px) { html { font-size: 19px; } } @media only screen and (min-width: 1780px) { html { font-size: 22px; } }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.2s;
+  color: wheat;
+  text-transform: capitalize;
+}
+body {
+  background-image: linear-gradient(
+    to right top,
+    #5d7eaf,
+    #133660,
+    #1d578d,
+    #1f7abb,
+    #12a0eb
+  );
+  background-image: url(./polygon-scatter-haikei.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 2rem;
+}
+.parent :nth-child(1) {
+  font-size: 2rem;
+  width: 22rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-family: system-ui;
+  background-image: linear-gradient(45deg, #1b397b, #0c7fcf);
+  overflow-x: hidden;
+}
+.parent :nth-child(1):hover {
+  box-shadow: 1px 11px 21px 1px #1b397b;
+}
+::placeholder {
+  color: wheat;
+}
+.parent :nth-child(2) {
+  height: 4rem;
+  width: 31rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #1b397b, #0c7fcf);
+}
+.parent :nth-child(2):hover {
+  box-shadow: 10px 10px 21px 1px #1b397b;
+  cursor: pointer;
+}
+.btn {
+  height: 4rem;
+  width: 11rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: linear-gradient(45deg, #1b397b, #0c7fcf);
+  box-shadow: 2px 1px 11px #1b397bed;
+  cursor: pointer;
+}
+.btn:hover {
+  scale: 1.1;
+}
+.parent :nth-child(2)[type="text"] {
+  padding: 2rem;
+  text-align: center;
+}
+.parent_marquee {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 20rem;
+  background: transparent;
+  z-index: -1;
+}
+.parent_marquee :nth-child(1) {
+  background: linear-gradient(45deg, #1b397b, #0c7fcf);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  height: 15rem;
+  animation: clipPath 15s infinite;
+}
+@keyframes clipPath {
+  to {
+    rotate: 360deg;
+  }
+}
+@media only screen and (max-width: 425px) {
+  html {
+    font-size: 10px;
+  }
+  .parent_marquee {
+    display: none;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 476px) {
+  html {
+    font-size: 12px;
+  }
+  .parent_marquee {
+    display: none;
+  }
+}
+@media only screen and (min-width: 516px) and (max-width: 744px) {
+  html {
+    font-size: 15px;
+  }
+  .parent_marquee {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media only screen and (min-width: 1780px) {
+  html {
+    font-size: 22px;
+  }
+}
